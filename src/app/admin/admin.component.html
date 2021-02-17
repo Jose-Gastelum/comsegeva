@@ -1,0 +1,51 @@
+<section id="container_general">
+    <div id="panel_control">
+
+        <header id="header">
+            <div id="hamburger">
+                <i (click)="extendermenu()" id="hamburger_menu" class="fas fa-bars"></i>
+            </div>
+
+            <div id="logo">
+            </div>
+
+            <div id="idioma">
+               
+            </div>
+        </header>
+
+
+
+
+        <nav id="nav_left">
+            <button id="btn_ocultar_menu" (click)="ocultar_menu()" class="btn btn-ligth">x</button>
+
+
+            <div id="div_nav">
+
+                <div [routerLink]="['imagenes_panel']" (click)="ocultar_menu()">
+                    <a><i style="margin-right: 1vw;" class="fas fa-briefcase"></i>Productos</a>
+                </div>
+
+                <div [routerLink]="['idioma_panel']" (click)="ocultar_menu()">
+                    <a><i style="margin-right: 1vw;" class="fas fa-award"></i>Categorías</a>
+                </div>
+            
+                <!-- 
+                <div [routerLink]="['fotos']" (click)="ocultar_menu()">
+                    <a>GALERIA</a>
+                </div> -->
+            </div>
+
+        </nav>
+
+
+        <section id="section2">
+            <router-outlet id="router-outlet"></router-outlet>
+        </section>
+
+
+
+
+    </div>
+</section>
